@@ -1,0 +1,10 @@
+describe('Upload file in QA Demo site', () => {
+
+    beforeEach(() => {
+        cy.visit(`${Cypress.env("demoQA")}/upload-download`)
+    });
+    it('Upload the file', () => {
+        cy.get("#uploadFile").attachFile("example.json");
+        cy.get('#uploadedFilePath').should("contain","example.json")
+    });
+});
