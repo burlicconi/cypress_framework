@@ -1,9 +1,13 @@
 const { defineConfig } = require("cypress");
-
+// Verify download import
+const { isFileExist, findFiles} = require("cy-verify-downloads");
 module.exports = defineConfig({
   e2e: {
-    // baseUrl:"http://uitestingplayground.com",
+    baseUrl:"http://uitestingplayground.com",
     setupNodeEvents(on, config) {
+      // Verify download import
+      on("task", { isFileExist, findFiles})
+      // -----------------------------------
       // implement node event listeners here
     },
     env:{
