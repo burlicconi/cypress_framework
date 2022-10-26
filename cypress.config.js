@@ -14,7 +14,8 @@ module.exports = defineConfig({
       angular:"https://www.globalsqa.com",
       demoQA:"https://demoqa.com",
       internetHero:"https://the-internet.herokuapp.com/"
-    }
+    },
+    experimentalSessionAndOrigin:true
   },
   pageLoadTimeout:60000,
   viewportHeight:1000,
