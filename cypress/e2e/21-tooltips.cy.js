@@ -15,4 +15,6 @@ describe('Tooltips', () => {
         cy.get(".tooltip-inner").should("have.text", "You hovered over the Contrary")
 
     });
+
+    
 });
