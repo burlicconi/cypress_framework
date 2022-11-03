@@ -21,3 +21,23 @@ require("cypress-xpath");
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// beforeEach(() => {
+//     cy.session("mySesion", ()=>{
+//     cy.visit(`${Cypress.env("demoQA")}/login`);
+//     // cy.get("#userName").type("test");
+//     cy.get("#password").type("Test1234*");
+//     cy.get("#login").click();
+//     // cy.url().should("contain","profile"); 
+//     })      
+// });
+
+// after(() => {
+//     cy.session("My session",()=>{
+//         cy.clearCookies();
+//         cy.getCookies().then((cookies)=>{
+//         expect(cookies).to.have.length(0)
+//     })
+//     })
+    
+// });
