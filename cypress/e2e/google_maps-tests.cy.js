@@ -9,9 +9,13 @@ describe('Google maps', () => {
         RoutePage.chooseARoute("Beograd", "Amsterdam")
 
         let longestRoute = RoutePage.longestRoute();
-        console.log(longestRoute)
+        cy.get('@maxRoute').then(maxRoute => {
+                cy.log('Longest route is:' + maxRoute)
+                
+            })
 
-        NavigationPage.ourRoute.click().type('{enter}')
+
+        //NavigationPage.ourRoute.click().type('{enter}')
         
         NavigationPage.choosenRouteKm.should('contain.text', `${longestRoute}`)
     });
